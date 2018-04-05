@@ -121,10 +121,10 @@ export class EventEmitterPromise<T> extends EventEmitter implements Promise<T> {
 export type Subscribe = (instance: Progress) => void;
 
 export class Progress extends EventEmitter {
-  @EventEmitter.Event public Progress: IEvent<Progress, number>;
-  @EventEmitter.Event public End: IEvent<Progress, null>;
-  @EventEmitter.Event public Start: IEvent<Progress, null>;
-  @EventEmitter.Event public Message: IEvent<Progress, string>;
+  @EventEmitter.Event public Progress!: IEvent<Progress, number>;
+  @EventEmitter.Event public End!: IEvent<Progress, null>;
+  @EventEmitter.Event public Start!: IEvent<Progress, null>;
+  @EventEmitter.Event public Message!: IEvent<Progress, string>;
 
   private started: boolean = false;
 
